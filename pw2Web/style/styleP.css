@@ -1,7 +1,11 @@
 .swiper {
-    height:500px;
-}
-.swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    border: dotted;
+    height: 300px;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -16,15 +20,3 @@
     height: 100%;
     object-fit: cover;
   }
-.carta{
-    border-radius: 25px;
-    height: 300px;
-}
-.i{
-    height: 40px;
-}
-.carte{
-  margin-top: -50px;
-  z-index: -1;
-  position: ;
-}
