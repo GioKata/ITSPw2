@@ -1,0 +1,25 @@
+/* CSS LETTERA DI RICHIAMO*/
+.container {
+    text-align: center;
+}
+
+/* rendi la form più piccola */
+.form-control {
+    width: 50%;
+    /* margin-left: 45%; */
+}
+
+.blocco {
+    margin-left: 33%;
+}
+
+form {
+    background: #6e6e6e;
+    border: 2px solid #000000;
+    /* Stile, spessore e colore del bordo */
+    padding: 20px;
+    /* Aggiungi spazio intorno ai bordi della form */
+    margin: 20px auto;
+    /* Centra la form nella pagina e aggiungi margine sopra e sotto */
+    max-width: auto;
+}

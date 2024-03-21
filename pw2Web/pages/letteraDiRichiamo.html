@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettera di richiamo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="../style/styleLetteraDiRichiamo.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container pt-5 my-5">
+        <h1 class="mb-4" id="titolo">Lettera di richiamo</h1>
+
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="cognome" id="cognome" placeholder="Cognome">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Indirizzo Email">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="letteraDiRichiamo" id="letteraDiRichiamo"
+                    placeholder="Scrivi qui la tua lettera di richiamo" rows="10"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="invia()">Invia lettera di richiamo</button>
+        </form>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="../script/functionInvia.js"></script>
+</body>
+
+</html>
