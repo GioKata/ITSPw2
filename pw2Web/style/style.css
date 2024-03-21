@@ -55,9 +55,6 @@ a{
 #testoC{
   font-size: 16px;
 }
-.offerte{
-  height: 1440px;
-}
 
 .n1,.n2,.n3{
   height: 250px;
@@ -70,17 +67,16 @@ a{
   inherits: false;
 }
 
-div.n1{
-  transition: --num 5s;
+div.n1 {
+  animation: counter 5s alternate ease-in-out forwards;
   counter-set: num var(--num);
   font: 800 40px system-ui;
+  padding: 2rem;
+  animation-timing-function: linear;
 }
-div.n1::before {
+div.n1::after {
   content: counter(num);
 }
-div.n1:hover 	 {
-  --num: 200;
-} 
 /*prova*/
 @property --num2 {
   syntax: "<integer>";
@@ -88,17 +84,18 @@ div.n1:hover 	 {
   inherits: false;
 }
 
-div.n2{
-  transition: --num2 5s;
+div.n2 {
+  animation: counter 5s alternate ease-in-out forwards;
   counter-set: num2 var(--num2);
   font: 800 40px system-ui;
+  padding: 2rem;
+  animation-timing-function: linear;
 }
-div.n2::before {
+div.n2::after {
   content: counter(num2);
 }
-div.n2:hover 	 {
-  --num2: 300;
-} 
+
+
 
 /*prova*/
 @property --num3 {
@@ -107,17 +104,34 @@ div.n2:hover 	 {
   inherits: false;
 }
 
-div.n3{
-  transition: --num3 5s;
+div.n3 {
+  animation: counter 5s alternate ease-in-out forwards;
   counter-set: num3 var(--num3);
   font: 800 40px system-ui;
+  padding: 2rem;
+  animation-timing-function: linear;
 }
-div.n3::before {
+div.n3::after {
   content: counter(num3);
 }
-div.n3:hover 	{
-  --num3: 30;
-}
-.contatori{
-  width: 100%;
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
+  from {
+    --num2: 0;
+  }
+  to {
+    --num2: 300;
+  }
+  from {
+    --num3: 0;
+  }
+  to {
+    --num3: 30;
+  }
 }
