@@ -21,9 +21,12 @@ public class Dipendente implements Comparable<Dipendente>{
                 + ", stipendio=" + stipendio + "]";
     }
     @Override
-    public int compareTo(Dipendente o) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    public int compareTo(Dipendente d) {
+        if(this.cognome.compareTo(d.cognome)==0){
+            return this.nome.compareTo(d.nome);
+        }else{
+            return this.cognome.compareTo(d.cognome);
+        }
     }
     @Override
     public boolean equals(Object obj) {

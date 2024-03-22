@@ -4,17 +4,14 @@ import java.time.LocalDate;
 
 public class Dirigente extends Dipendente{
     private String divisione;
-    private String codiceManager;
 
-
-    public Dirigente(String cf,String n, String c, LocalDate d,String di,String co) {
+    public Dirigente(String cf,String n, String c, LocalDate d,String di) {
         super(cf,n, c, d);
         stipendio=2500;
         divisione=di;
-        codiceManager=co;
     }
     //da sistemare
-    public  void setStipendio(int nPersonale){
-        stipendio=stipendio+(nPersonale/10);
+    public  void setStipendio(double somma){
+        stipendio=stipendio+somma;
     }
 }

@@ -13,8 +13,8 @@ public class Manager extends Dipendente{
         this.settore = settore;
     }
     //da sistemare
-    public  void setStipendio(int nTecnici){
-        stipendio=stipendio+(nTecnici/10);
+    public  void setStipendio(double somma){
+        stipendio=stipendio+somma;
     }
     
 }
