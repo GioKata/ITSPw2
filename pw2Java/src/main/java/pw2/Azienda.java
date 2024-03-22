@@ -59,6 +59,21 @@ public class Azienda {
             }
         }
     }
+    public void stampaScelta(String tipDipendente){
+        sortPermanenza();
+        switch (tipDipendente) {
+            case "Manager":
+                
+                break;
+            case "Dirigente":
+                
+            break;
+            case "Tecnico":
+                
+                break;
+        }
+    }
+
     public void sortAlfabetico(){
         Collections.sort(dipendenti);
     }

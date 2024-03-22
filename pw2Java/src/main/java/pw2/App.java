@@ -5,10 +5,6 @@ import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -45,7 +41,6 @@ public class App
                 System.out.println("////////////////////PERMANENZA///////////////////");
                 a.sortPermanenza();
                 System.out.println(a);
-
 
         }catch (FileNotFoundException e) {
                     throw new RuntimeException("file non trovato");
