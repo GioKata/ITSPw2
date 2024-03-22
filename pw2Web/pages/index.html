@@ -29,14 +29,14 @@
             </header>
         </div>
         
-        <div class="container-fluid">
+        <div class="container-fluid m-0 p-0">
           <!-- swiper -->
           <div class="swiper">
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><img src="../images/car1.png"></div>
-              <div class="swiper-slide"><img src="../images/car2.png"></div>
-              <div class="swiper-slide"><img src="../images/car3.jpg"></div>
+              <div class="swiper-slide"><img class="img-fluid" src="../images/car1.png"></div>
+              <div class="swiper-slide"><img class="img-fluid" src="../images/car2.png"></div>
+              <div class="swiper-slide"><img class="img-fluid" src="../images/car3.jpg"></div>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
                 <p>Il nostro corso intensivo per reclutatori offre un'esperienza formativa interattiva e coinvolgente, focalizzata sul miglioramento delle abilità di selezione e valutazione dei talenti. Attraverso simulazioni pratiche, giochi di ruolo e analisi dei casi, i partecipanti svilupperanno competenze di reclutamento avanzate, trasformando il loro approccio al talento.</p>
               </div>
               <div class="col-5 m-3 text-start">
-                <img src="../images/class.webp" width="545px">
+                <img class="img-fluid" src="../images/class.webp" width="545px">
               </div>
             </div>
             <!-- titolo suddivisiorio -->
@@ -81,9 +81,9 @@
               </div>
             </div>
             <!-- two col-6 -->
-            <div class="row d-flex align-items-center justify-content-center mt-5 pt-3">
+            <div class="row d-flex align-items-center justify-content-center mt-5  mb-5 py-3">
               <div class="col-5 m-3 text-center">
-                <img src="../images/fist.jpg" width="545px">
+                <img class="img-fluid" src="../images/fist.jpg" width="545px">
               </div>
               <div class="col-5 m-3 text-end testo6">
                 <p>Dopo il corso, i partecipanti apriranno le porte a stimolanti opportunità professionali, potendo accedere a ruoli di reclutamento di livello superiore all'interno delle aziende o persino intraprendere una carriera brillante come consulenti indipendenti nel settore.</p>
@@ -92,7 +92,7 @@
         </div>
         <!-- Call to action -->
         <div class="container-fluid">
-          <div class="row text-center">
+          <div class="row text-center" id="prova">
             <div class="col p-0">
               <img class="img-fluid" src="../images/callToAction.webp">
             </div>
@@ -118,6 +118,7 @@
               </div>
             </div>
           </div>
+          <!-- contatori -->
           <div class="row contatori bg-dark">
             <div class="col m-0  offerte n1 text-white text-center d-flex flex-column justify-content-center">
               <h4>clienti soddisfatti</h4>
@@ -129,10 +130,84 @@
               <h4>chiusura selezione</h4>
             </div>
           </div>
-          <div class="row offerte bg-dark">
-
+          <!-- Ultime offerte di lavoro -->
+          <div class="row offerte bg-dark d-flex justify-content-center py-5">
+            <div class="col-5 border border-white text-whites mx-5 bg-white card-Job">
+              <div class="container p-5 text-dark">
+                <div class="row d-flex flex-column">
+                    <h2 class="card-Title">Responsabile Montaggio</h2>
+                    <p>Sei un leader nato con una passione per la meccanica e l’innovazione? 
+                      Unisciti a noi come responsabile al montaggio e trasforma la tua abilità in successi tangibili.
+                    </p>
+                    <br />
+                    <button class="btn text-center card-Button">Visualizza</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-5 border border-white text-whites mx-5 bg-white card-Job">
+              <div class="container p-5 text-dark">
+                <div class="row d-flex flex-column">
+                    <h2 class="card-Title">Vendite export Madrid</h2>
+                    <p>Se la vostra azienda di esportazione è pronta a espandere i suoi orizzonti, il nostro portale di recruiting è la piattaforma ideale per iniziare un dialogo costruttivo e fruttuoso. Madrid vi attende! 
+                    </p>
+                    <br />
+                    <button class="btn text-center card-Button">Visualizza</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row offerte bg-dark d-flex justify-content-center py-5">
+            <div class="col-5 border border-white text-whites mx-5 bg-white card-Job">
+              <div class="container p-5 text-dark">
+                <div class="row d-flex flex-column">
+                    <h2 class="card-Title">Project Manager</h2>
+                    <p>Trasforma la tua visione in realtà e guida i progetti verso il successo come nostro Project Manager. Se hai la passione per la gestione strategica e l’innovazione, questa è la tua occasione per brillare.
+                    </p>
+                    <br />
+                    <button class="btn text-center card-Button">Visualizza</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-5 border border-white text-whites mx-5 bg-white card-Job">
+              <div class="container p-5 text-dark">
+                <div class="row d-flex flex-column">
+                    <h2 class="card-Title">Plant controller Italy</h2>
+                    <p>Eleva la tua carriera nel controllo di gestione con una posizione che sfida e valorizza le tue competenze analitiche. Come Plan Controller, sarai la chiave per strategie aziendali vincenti e risultati reali.
+                    </p>
+                    <br />
+                    <button class="btn text-center card-Button">Visualizza</button>
+                </div>
+              </div>
+            </div>
           </div>
           
+        </div>
+        <!-- footer -->
+        <div class="container pt-5 mt-5">
+          <div class="row d-flex justify-content-around pt-5 mt-5 border-top">
+            <div class="col-5 d-felx flex-column">
+                <h4 class="footer-title">Recruit ITSolutions ITC</h4>
+                <p class="footer-termini">Utilizzo soggetto a Termini e le condizioni.Itsolutions Online oe il sito web sono le denominazioni commerciali associate a ITS Incom Italia.Capitale sociale Euro 1000000,00(i.v).Società soggetta a direzione e cordinamento da parte di ITS Incom, con sede legale a Busto Arsizio.</p>
+            </div>
+            <div class="col-3">
+              <h2 class="footer-titles">Contattaci</h2>
+              <p class="footer-text">Email: itsolution@itsincom.it</p>
+              <p class="footer-text">Numero: 0331867886</p>
+            </div>
+            <div class="col-3">
+              <h2 class="footer-titles">Seguici su</h2>
+              <p class="footer-text">Instagram</p>
+              <p class="footer-text">Facebook</p>
+              <p class="footer-text">Linkedin</p>
+            </div>
+          </div>
+          <div class="row justify-content-center border-top">
+            <br />
+            <div class="col-3 mx-4">Copyright 2015 @ITSolutions  </div>
+            <div class="col-3 mx-4">Servizio clienti: 0331453445</div>
+            <br>
+            <br>
+          </div>
         </div>
         
         <script src="https://kit.fontawesome.com/84e994ef68.js" crossorigin="anonymous"></script>

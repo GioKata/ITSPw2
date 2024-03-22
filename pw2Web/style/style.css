@@ -34,7 +34,7 @@
   font-size: 16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-p,h3{
+p,h3,h1,h2,h4,h5,h6{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #divisorio{
@@ -56,6 +56,39 @@ a{
   font-size: 16px;
 }
 
+.card-Job{
+  border-radius: 20px;
+}
+.card-Title{
+  color: #6161FF;
+  font-size: 32px;
+}
+.card-Button{
+  border:solid 1px;
+  border-color: #00B0FF;
+  border-radius: 10px;
+  background-color: #BFDEEC;
+  color:#808080;
+  font-size:24px;
+}
+.footer-titles{
+  color:#0000FF;
+  font-size: 24px;
+}
+
+.footer-title{
+  font-size: 30px;
+}
+.footer-termini{
+  font-size: 14px;
+}
+.footer-text{
+  font-size: 18px;
+}
+
+
+
+/*animazioni*/
 .n1,.n2,.n3{
   height: 250px;
 }
@@ -74,7 +107,7 @@ div.n1 {
   padding: 2rem;
   animation-timing-function: linear;
 }
-div.n1::after {
+div.n1::before {
   content: counter(num);
 }
 /*prova*/
@@ -91,7 +124,7 @@ div.n2 {
   padding: 2rem;
   animation-timing-function: linear;
 }
-div.n2::after {
+div.n2::before {
   content: counter(num2);
 }
 
@@ -111,7 +144,7 @@ div.n3 {
   padding: 2rem;
   animation-timing-function: linear;
 }
-div.n3::after {
+div.n3::before {
   content: counter(num3);
 }
 
@@ -120,7 +153,7 @@ div.n3::after {
     --num: 0;
   }
   to {
-    --num: 100;
+    --num: 200;
   }
   from {
     --num2: 0;
