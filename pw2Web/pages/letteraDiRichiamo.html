@@ -6,39 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lettera di richiamo</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
-    <link href="../style/styleLetteraDiRichiamo.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/styleLetteraDiRichiamo.css">
+</head>
 </head>
 
 <body>
-    <div class="container pt-5 my-5">
-        <h1 class="mb-4" id="titolo">Lettera di richiamo</h1>
+    <div class="container">
+        <!-- header -->
+        <header class="d-flex flex-wrap align-items-center justify-content-center py-3">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <img src="../images/prova1.svg" height="100px">
+            </a>
 
-        <form>
-            <div class="form-group">
-                <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" name="cognome" id="cognome" placeholder="Cognome">
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Indirizzo Email">
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" name="letteraDiRichiamo" id="letteraDiRichiamo"
-                    placeholder="Scrivi qui la tua lettera di richiamo" rows="10"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="invia()">Invia lettera di richiamo</button>
-        </form>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-dark">Invia lettera di richiamo</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Dipendenti</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Tecnici</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Manager</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Leggenda</a></li>
+            </ul>
 
-    </div>
+            <div class="col-md-3 text-end">
+                <button type="button" class="btn btn-primary">Esci</button>
+            </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </header>
 
-    <script src="../script/functionInvia.js"></script>
-</body>
+        <body>
+            <div class="container pt-5 my-5">
+                <!-- form -->
+                <div class="row d-flex align-items-center" id="prima">
+                    <div class="col-5 p-0 ">
+                        <div id="primo" class="d-flex align-items-center">
+                            <h1 class="ms-5 ps-2" id="titolo">Lettera di richiamo</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="col-7 p-0">
+                        <div class="container p-0">
+                            <div class="row">
+                                <div class="col" id="form">
+                                    <form>
+                                        <div class="input-group blocco">
+                                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+                                        </div>
+                                        <div class="input-group blocco">
+                                            <input type="text" class="form-control" name="cognome" id="cognome" placeholder="Cognome">
+                                        </div>
+                                        <div class="input-group blocco">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Indirizzo Email">
+                                        </div>
+                                        <div class="input-group blocco">
+                                            <textarea class="form-control" name="letteraDiRichiamo" id="letteraDiRichiamo"
+                                                placeholder="Scrivi qui la tua lettera di richiamo" rows="5"></textarea>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" onclick="invia()">Invia lettera di richiamo</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS and dependencies -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../script/functionInvia.js"></script>
+        </body>
 
 </html>
