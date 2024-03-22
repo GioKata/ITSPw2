@@ -8,6 +8,12 @@ public class Dipendente implements Comparable<Dipendente>{
     protected String cognome;
     protected LocalDate  dataAssunzione;
     protected double stipendio;
+    public LocalDate getDataAssunzione() {
+        return dataAssunzione;
+    }
+    public double getStipendio() {
+        return stipendio;
+    }
     //costruttore senza definire stipendio
     public  Dipendente(String cf,String n, String c, LocalDate d){
         this.cf=cf;

@@ -34,9 +34,18 @@ public class App
                     }
                 }
                 
-                //calcola stipendio funzionante
+                //calcola stipendio da sistemare la stampa
+                System.out.println(a);
+                System.out.println("////////////////////STIPENDIO///////////////////");
                 a.calcolaStipendio();
-                System.out.println("///////////////////////////////////////");
+                System.out.println(a);
+                System.out.println("////////////////////ALFABETICO///////////////////");
+                a.sortAlfabetico();
+                System.out.println(a);
+                System.out.println("////////////////////PERMANENZA///////////////////");
+                a.sortPermanenza();
+                System.out.println(a);
+
 
         }catch (FileNotFoundException e) {
                     throw new RuntimeException("file non trovato");

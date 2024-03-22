@@ -1,6 +1,8 @@
 package pw2;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Azienda {
     private String nome;
@@ -41,7 +43,7 @@ public class Azienda {
             if(dip.getClass()==Tecnico.class){
                 Tecnico t=(Tecnico) dip;
                 if(t.getCodiceM().equals(m.cf)){
-                    c=c+(t.stipendio*10/100);
+                    c=c+(t.getStipendio()*10/100);
                 }
             }
         }
@@ -53,11 +55,21 @@ public class Azienda {
         for (Dipendente dip : dipendenti) {
             if(!(dip.getClass()==Dirigente.class)){
                 //calcola
-                c=c+(dip.stipendio*10/100);
+                c=c+(dip.getStipendio()*10/100);
             }
         }
     }
-
+    public void sortAlfabetico(){
+        Collections.sort(dipendenti);
+    }
+    public void sortPermanenza() {
+        Collections.sort(dipendenti, new Comparator<Dipendente>() {
+            @Override
+            public int compare(Dipendente d1, Dipendente d2) {
+                return d1.getDataAssunzione().compareTo(d2.getDataAssunzione());
+            }
+        });
+    }
     @Override
     public String toString() {
         return "Azienda [nome=" + nome + ", dipendenti=" + dipendenti + "]";
