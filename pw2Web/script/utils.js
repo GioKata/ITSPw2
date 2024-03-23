@@ -81,11 +81,12 @@ function fetchPost(url, data) {
 
 
 function getQueryStringValue(parameter) {
+    console.log("ciao");
     // Ottieni l'intera stringa di query dall'URL
     var queryString = window.location.search.substring(1);
 
     // Suddividi la stringa di query in coppie nome=valore
-    var queryParams = queryString.split("&");
+    var queryParams = queryString.split("?");
 
     // Cerca il parametro desiderato tra le coppie
     for (var i = 0; i < queryParams.length; i++) {
@@ -93,6 +94,7 @@ function getQueryStringValue(parameter) {
 
         // Se trovi il parametro, restituisci il valore
         if (pair[0] === parameter) {
+            console.log(decodeURIComponent(pair[1]));
             return decodeURIComponent(pair[1]);
         }
     }

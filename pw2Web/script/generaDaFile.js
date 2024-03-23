@@ -1,3 +1,7 @@
+function getUrl(){
+    var a=getQueryStringValue("type");
+    filterData(a);
+}
 function filterData(typeDip){
     fetch("../files/Dipendenti.json")
         .then(response => response.json())
@@ -37,10 +41,9 @@ function createCard(d){
             let card = document.createElement("div");
             card.classList.add("col-4","px-2","py-3");
             let topDiv=document.createElement("div");
-            topDiv.classList.add("d-flex","flex-column","text-center","topDiv","pt-1");
+            topDiv.classList.add("d-flex","flex-column","text-center","topDiv","pt-1",d.categoria);
             let dataDiv=document.createElement("div");
             dataDiv.classList.add("d-flex","flex-column","justify-content-center","dataDiv","p-3");
-            topDiv.classList.add(d.categoria);
             topDiv.innerHTML='<h5>'+d.nome+" "+d.cognome+'<h5><h6>'+d.categoria+'<h6>';
             if(d.categoria==="dirigente"){
                 dataDiv.innerHTML='<p>Data assunzione: ' + d.dataAssunzione + '</p><p>Codice fiscale: ' + d.codiceFiscale + '</p>';
@@ -54,7 +57,6 @@ function createCard(d){
         .catch(error => {
             console.error('Error fetching reference:', error);
         });
-    
 }
 function getDr(dipendente) {
     return new Promise((resolve, reject) => {

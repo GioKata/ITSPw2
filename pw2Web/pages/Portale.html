@@ -6,7 +6,7 @@
         <link href="../style/styleP.css" rel="stylesheet">
         
       </head>
-    <body onload="filterData()">
+    <body onload="getUrl()">
         <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center py-3">
               <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -15,10 +15,10 @@
         
               <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="#" class="nav-link px-2 link-dark" onclick="filterData()">Dipendenti</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark" onclick="filterData('tecnico')">Tecnici</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark" onclick="filterData('manager')">Manager</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark" onclick="filterData('dirigente')">Dirigenti</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark" onclick="filterData('Leggenda')">Leggenda</a></li>
+                <li><a href="?type=tecnico" class="nav-link px-2 link-dark" onclick="getUrl()">Tecnici</a></li>
+                <li><a href="?type=manager" class="nav-link px-2 link-dark" onclick="getUrl()">Manager</a></li>
+                <li><a href="?type=dirigente" class="nav-link px-2 link-dark" onclick="getUrl()">Dirigenti</a></li>
+                <li><a href="?type=Leggenda" class="nav-link px-2 link-dark" onclick="getUrl()">Leggenda</a></li>
               </ul>
 
             </header>
