@@ -17,7 +17,7 @@
         <!-- header -->
         <header class="d-flex flex-wrap align-items-center justify-content-center py-3">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <img src="../images/prova1.svg" height="100px">
+                <img src="../../pw2Design/logov.svg" height="50px">
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -37,32 +37,36 @@
         <body>
             <div class="container pt-5 my-5">
                 <!-- form -->
-                <div class="row d-flex align-items-center" id="prima">
-                    <div class="col-5 p-0 ">
+                <div class="row d-flex justify-content-center align-items-center" id="prima">
+                    <div class="col-4 p-0">
                         <div id="primo" class="d-flex align-items-center">
-                            <h1 class="ms-5 ps-2" id="titolo">Lettera di richiamo</h1>
+                            <h1 class="ms-5 ps-5" id="titolo">Lettera di richiamo</h1>
                         </div>
                         
                     </div>
-                    <div class="col-7 p-0">
+                    <div class="col-6    p-0">
                         <div class="container p-0">
                             <div class="row">
-                                <div class="col" id="form">
+                                <div class="col d-flex align-items-center" id="form">
                                     <form>
+                                        <p class="text-start titoloInput">Nome</p>
                                         <div class="input-group blocco">
                                             <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
                                         </div>
+                                        <p class="text-start titoloInput">Cognome</p>
                                         <div class="input-group blocco">
                                             <input type="text" class="form-control" name="cognome" id="cognome" placeholder="Cognome">
                                         </div>
+                                        <p class="text-start titoloInput">Email</p>
                                         <div class="input-group blocco">
                                             <input type="email" class="form-control" name="email" id="email" placeholder="Indirizzo Email">
                                         </div>
+                                        <p class="text-start titoloInput">Lettera di richiamo</p>
                                         <div class="input-group blocco">
                                             <textarea class="form-control" name="letteraDiRichiamo" id="letteraDiRichiamo"
                                                 placeholder="Scrivi qui la tua lettera di richiamo" rows="5"></textarea>
                                         </div>
-                                        <button type="button" class="btn btn-primary" onclick="invia()">Invia lettera di richiamo</button>
+                                        <button id="bottone" type="button" class="btn blocco mt-3" onclick="invia()">Invia lettera di richiamo</button>
                                     </form>
                                 </div>
                             </div>
