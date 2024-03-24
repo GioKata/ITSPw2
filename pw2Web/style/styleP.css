@@ -25,3 +25,16 @@ h5{
 .tecnico{
     background-color: #6161FF;
 }
+/*Header Rersponsive*/
+.hamburger{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .hamburger{
+        display: block !important;
+    }
+    .esci{
+        width: 0px !important;
+        display: none;
+    }
+}

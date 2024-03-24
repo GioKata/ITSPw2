@@ -36,3 +36,16 @@ form {
 .titoloInput{
     color: white;
 }
+
+/*Header responsive*/
+.hamburger{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .hamburger{
+        display: block !important;
+    }
+    .esci{
+        display: none;
+    }
+}

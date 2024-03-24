@@ -8,18 +8,47 @@
       </head>
     <body onload="getUrl()">
         <div class="container">
-            <header class="d-flex flex-wrap align-items-center justify-content-center py-3">
-              <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <img src="../images/prova1.svg" height="100px">
-              </a>
-        
-              <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-dark" onclick="filterData()">Dipendenti</a></li>
-                <li><a href="?type=tecnico" class="nav-link px-2 link-dark" onclick="getUrl()">Tecnici</a></li>
-                <li><a href="?type=manager" class="nav-link px-2 link-dark" onclick="getUrl()">Manager</a></li>
-                <li><a href="?type=dirigente" class="nav-link px-2 link-dark" onclick="getUrl()">Dirigenti</a></li>
-                <li><a href="?type=Leggenda" class="nav-link px-2 link-dark" onclick="getUrl()">Leggenda</a></li>
-              </ul>
+            <header class="d-flex align-items-center justify-content-center py-3">
+              <div class="col">
+                <a href="index.html" class="d-flex align-items-center mb-2  text-dark text-decoration-none">
+                    <img class="img-fluid" src="../../pw2Design/logov.svg">
+                </a>
+              </div>
+              <div class="col hamburger ms-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dipendenti
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="filterData();">Dipendenti</a></li>
+                    <li><a class="dropdown-item" href="?type=tecnico">Tecnici</a></li>
+                    <li><a class="dropdown-item" href="?type=manager">Manager</a></li>
+                    <li><a class="dropdown-item" href="?type=dirigente">Dirigenti</a></li>
+                    <li><a class="dropdown-item" href="?type=Leggenda">Leggende</a></li>
+                </ul>
+              </li>
+            </div>
+              
+              <div class="col esci">
+                <a href="#" class="nav-link px-2 link-dark" onclick="filterData();">Dipendenti</a>
+              </div>
+              <div class="col esci">
+                <a href="?type=tecnico" class="nav-link px-2 link-dark">Tecnici</a>
+              </div>
+              <div class="col esci">
+                <a href="?type=manager" class="nav-link px-2 link-dark">Manager</a>
+              </div>
+              <div class="col esci">
+                <a href="?type=dirigente" class="nav-link px-2 link-dark">Dirigenti</a>
+              </div>
+              <div class="col esci">
+                <a href="?type=Leggenda" class="nav-link px-2 link-dark">Leggenda</a>
+              </div>
+              <div class="col">
+                <a href="letteraDiRichiamo.html" class="nav-link px-2 link-dark">Lettera di richiamo</a>
+              </div>
+              <div class="col-2 text-end">
+                <button type="button" class="btn btn-primary"><a href="index.html">Esci</a></button>
+            </div>
 
             </header>
         </div>

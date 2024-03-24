@@ -168,3 +168,16 @@ div.n3::before {
     --num3: 30;
   }
 }
+
+/*Header Responsive*/
+.hamburger{
+  display: none;
+}
+@media screen and (max-width: 600px){
+  .hamburger{
+      display: block !important;
+  }
+  .esci{
+      display: none;
+  }
+}
