@@ -8,8 +8,17 @@ public class Dipendente implements Comparable<Dipendente>{
     protected String cognome;
     protected LocalDate  dataAssunzione;
     protected double stipendio;
+    public String getNome() {
+        return nome;
+    }
+    public String getCognome() {
+        return cognome;
+    }
     public LocalDate getDataAssunzione() {
         return dataAssunzione;
+    }
+    public String getCf() {
+        return cf;
     }
     public double getStipendio() {
         return stipendio;

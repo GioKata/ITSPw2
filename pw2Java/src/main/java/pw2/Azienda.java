@@ -59,24 +59,20 @@ public class Azienda {
             }
         }
     }
+    public void stampaStipendio(){
+        for (Dipendente d : dipendenti) {
+            System.out.println(d.getClass()+"[CF:"+d.getCf()+", nome:"+d.getNome()+", cognome:"+d.getCognome()+", stipendio:"+d.getStipendio()+"]");
+        }
+    }
     public void stampaScelta(String tipDipendente){
         sortPermanenza();
-        switch (tipDipendente) {
-            case "Manager":
-                
-                break;
-            case "Dirigente":
-                
-            break;
-            case "Tecnico":
-                
-                break;
+        for (Dipendente d : dipendenti) {
+            if(d.getClass().getName().equals(("pw2."+tipDipendente))){
+                stampaAnagrafici(d);
+            }
         }
     }
 
-    public void sortAlfabetico(){
-        Collections.sort(dipendenti);
-    }
     public void sortPermanenza() {
         Collections.sort(dipendenti, new Comparator<Dipendente>() {
             @Override
@@ -85,6 +81,14 @@ public class Azienda {
             }
         });
     }
+    public void  stampaAnagrafici(Dipendente d){
+        System.out.println("[Nome:"+d.getNome()+", Cognome:"+d.getCognome()+", cf:"+d.getCf()+"]");
+    }
+
+    public void sortAlfabetico(){
+        Collections.sort(dipendenti);
+    }
+
     @Override
     public String toString() {
         return "Azienda [nome=" + nome + ", dipendenti=" + dipendenti + "]";
