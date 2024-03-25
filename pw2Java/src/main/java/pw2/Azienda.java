@@ -17,9 +17,11 @@ public class Azienda {
         try {
             if(!dipendenti.contains(d))
                 dipendenti.add(d);
+            else{
+                throw  new Exception();
+            }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
-            System.out.println("Errore:");
+            System.out.println("Errore dipendente non inserito poichè già esistente:"+d.getCf());
         }
     }
 
@@ -47,6 +49,7 @@ public class Azienda {
                 }
             }
         }
+        m.setStipendio(c);
     }
 
     public void calcolaStipendioD(Dipendente d){
@@ -58,16 +61,17 @@ public class Azienda {
                 c=c+(dip.getStipendio()*10/100);
             }
         }
+        di.setStipendio(c);
     }
     public void stampaStipendio(){
         for (Dipendente d : dipendenti) {
-            System.out.println(d.getClass()+"[CF:"+d.getCf()+", nome:"+d.getNome()+", cognome:"+d.getCognome()+", stipendio:"+d.getStipendio()+"]");
+            System.out.println(d.getClass().getSimpleName()+"[CF:"+d.getCf()+", nome:"+d.getNome()+", cognome:"+d.getCognome()+", stipendio:"+d.getStipendio()+"]");
         }
     }
     public void stampaScelta(String tipDipendente){
         sortPermanenza();
         for (Dipendente d : dipendenti) {
-            if(d.getClass().getName().equals(("pw2."+tipDipendente))){
+            if(d.getClass().getSimpleName().equalsIgnoreCase(tipDipendente)){
                 stampaAnagrafici(d);
             }
         }
@@ -82,7 +86,7 @@ public class Azienda {
         });
     }
     public void  stampaAnagrafici(Dipendente d){
-        System.out.println("[Nome:"+d.getNome()+", Cognome:"+d.getCognome()+", cf:"+d.getCf()+"]");
+        System.out.println(d.getClass().getSimpleName()+"[Nome:"+d.getNome()+", Cognome:"+d.getCognome()+", cf:"+d.getCf()+"]");
     }
 
     public void sortAlfabetico(){

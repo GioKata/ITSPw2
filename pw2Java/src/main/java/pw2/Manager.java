@@ -12,7 +12,6 @@ public class Manager extends Dipendente{
         stipendio=2000;
         this.settore = settore;
     }
-    //da sistemare
     public  void setStipendio(double somma){
         stipendio=stipendio+somma;
     }

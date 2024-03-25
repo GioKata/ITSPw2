@@ -10,7 +10,6 @@ public class Dirigente extends Dipendente{
         stipendio=2500;
         divisione=di;
     }
-    //da sistemare
     public  void setStipendio(double somma){
         stipendio=stipendio+somma;
     }
