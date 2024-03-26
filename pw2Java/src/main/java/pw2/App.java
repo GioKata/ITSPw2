@@ -14,9 +14,9 @@ public class App
         System.out.println("Scegli il nome dell'azienda");
         Azienda a=new Azienda(input.nextLine());
         createDaFile(a);
-        do{
+        do{//menu iterativo 'yes' per continuare
             System.out.println("Menù");
-            do{
+            do{//controllo valore input
                 System.out.println("1)Stipendio  2)Ordine Alfabetico  3)Tipologia");
                 scelta=input.nextLine();
             }while(!scelta.equalsIgnoreCase("Stipendio") && !scelta.equalsIgnoreCase("1") && !scelta.equalsIgnoreCase("Ordine Alfabetico") && !scelta.equalsIgnoreCase("2") && !scelta.equalsIgnoreCase("Tipologia") && !scelta.equalsIgnoreCase("3"));
@@ -31,20 +31,20 @@ public class App
                     System.out.println(a);
                     break;
                 case  "Tipologia": case "3":
-                    do{
-                        do{
+                    do{//menu iterativo 'yes' per continuare
+                        do{//controllo valore input
                             System.out.println("inserisci la tipologia di Dipendente di cui vuoi sapere i dati anagrafici (Tecnico,Manager,Dirigente)");
                             tip=input.nextLine();
                         }while(!tip.equalsIgnoreCase("Tecnico") && !tip.equalsIgnoreCase("Manager")  && !tip.equalsIgnoreCase("Dirigente"));
                         a.stampaScelta(tip);
-                        do{
+                        do{//controllo valore input
                             System.out.println("Voui continuare a scegliere  una tipologia di Dipendente y/n");
                             r=input.nextLine();
                         }while(!r.equalsIgnoreCase("y") && !r.equalsIgnoreCase("yes") && !r.equalsIgnoreCase("n") && !r.equalsIgnoreCase("no"));
                     }while(r.equals("y") && !r.equalsIgnoreCase("yes"));
                     break;
             }
-            do{
+            do{//controllo valore input
                 System.out.println("Sei tornato nel menù voui continuare y/n");
                 r2=input.nextLine();
             }while(!r2.equalsIgnoreCase("y") && !r2.equalsIgnoreCase("yes") && !r2.equalsIgnoreCase("n") && !r2.equalsIgnoreCase("no")); 
@@ -53,28 +53,42 @@ public class App
         input.close();
     }
     public static void createDaFile(Azienda a){
+        int countLine=0;
         try (Scanner r = new Scanner(new File("pw2Java\\elenco dipendenti.txt"))) {
-            while(r.hasNextLine()){
+            while(r.hasNextLine()){//ciclo per ogni riga del file
+                countLine++;
                 String[] s=r.nextLine().split(";");
-                switch (s[0]) {
+                switch (s[0]) {//creo un dipendente in base al primo parametro
                     case "dirigente":
                         Dirigente d=new Dirigente(s[1], s[2], s[3], LocalDate.parse(s[4]), s[5]);
-                        a.addDipendente(d);
+                        try {//eccezione lanciata in caso dipendente già inserito
+                            a.addDipendente(d);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("Errore nel file in riga:"+countLine+" dipendente già inserito cf:"+s[1]);
+                        }
                         break;
                     case "manager":
                         Manager m=new Manager(s[1], s[2], s[3], LocalDate.parse(s[4]), s[6], s[5]);
-                        a.addDipendente(m);
+                        try {
+                            a.addDipendente(m);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("Errore nel file in riga:"+countLine+" dipendente già inserito cf:"+s[1]);
+                        }
                         break;
                     case "tecnico":
                         Tecnico t=new Tecnico(s[1], s[2], s[3], LocalDate.parse(s[4]),s[6],s[5]);
-                        a.addDipendente(t);
+                        try {
+                            a.addDipendente(t);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("Errore nel file in riga:"+countLine+" dipendente già inserito cf:"+s[1]);
+                        }
                         break;
                 }
             }
             a.calcolaStipendio();
             r.close();
         }catch (FileNotFoundException e) {
-            throw new RuntimeException("file non trovato");
+            throw new RuntimeException("file elenco dipendenti.txt non trovato");
         }
     
     }

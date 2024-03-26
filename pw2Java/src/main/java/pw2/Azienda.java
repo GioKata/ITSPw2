@@ -13,24 +13,25 @@ public class Azienda {
         this.dipendenti=new ArrayList<>();
     }
 
-    public void addDipendente(Dipendente d){
-        try {
-            if(!dipendenti.contains(d))
-                dipendenti.add(d);
-            else{
-                throw  new Exception();
-            }
-        } catch (Exception e) {
-            System.out.println("Errore dipendente non inserito poichè già esistente:"+d.getCf());
+    public void addDipendente(Dipendente d) throws IllegalArgumentException{
+        if(!dipendenti.contains(d))
+            dipendenti.add(d);
+        else{
+            throw new IllegalArgumentException();
         }
     }
 
     public void calcolaStipendio(){
+        //stipendio tecnici calcolato nel costruttore
+
+        //stipendio manager
         for (Dipendente d : dipendenti) {
             if(d.getClass()==Manager.class){
                 calcolaStipendioM(d);
             }
         }
+
+        //stipendio dirigenti dopo aver finito gli altri stipendi
         for (Dipendente d : dipendenti) {
             if(d.getClass()==Dirigente.class){
                 calcolaStipendioD(d);
