@@ -20,7 +20,7 @@
                     <img class="img-fluid" src="../../pw2Design/logov.svg">
                 </a>
             </div>
-            
+            <!-- header responsive   -->
             <div class="col hamburger ms-3">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dipendenti
@@ -57,33 +57,33 @@
         <div class="container pt-5 my-5">
             <!-- form -->
             <div class="row d-flex justify-content-center align-items-center" id="prima">
-                <div class="col-4 p-0">
+                <div class="col-4 p-0" id="col-esci">
                     <div id="primo" class="d-flex align-items-center">
                         <h1 class="ms-5 ps-5" id="titolo">Lettera di richiamo</h1>
                     </div>
                         
                 </div>
-                <div class="col-6    p-0">
+                <div class="col p-0">
                     <div class="container p-0">
                         <div class="row">
                             <div class="col d-flex align-items-center" id="form">
                                 <form>
                                     <p class="text-start titoloInput">Nome</p>
                                     <div class="input-group blocco">
-                                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+                                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
                                     </div>
                                     <p class="text-start titoloInput">Cognome</p>
                                     <div class="input-group blocco">
-                                        <input type="text" class="form-control" name="cognome" id="cognome" placeholder="Cognome">
+                                        <input type="text" class="form-control" name="cognome" id="cognome" placeholder="Cognome" required>
                                     </div>
                                     <p class="text-start titoloInput">Email</p>
                                     <div class="input-group blocco">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Indirizzo Email">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Indirizzo Email" required> 
                                     </div>
                                     <p class="text-start titoloInput">Lettera di richiamo</p>
                                     <div class="input-group blocco">
                                         <textarea class="form-control" name="letteraDiRichiamo" id="letteraDiRichiamo"
-                                            placeholder="Scrivi qui la tua lettera di richiamo" rows="5"></textarea>
+                                            placeholder="Scrivi qui la tua lettera di richiamo" rows="3" required></textarea>
                                     </div>
                                     <button id="bottone" type="button" class="btn blocco mt-3" onclick="invia()">Invia lettera di richiamo</button>
                                 </form>

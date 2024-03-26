@@ -164,7 +164,7 @@ div.n3::before {
 
 /*Header Responsive*/
 .hamburger{
-  display: none !important;
+  display: none;
 }
 @media screen and (max-width: 600px){
   .hamburger{
@@ -177,7 +177,7 @@ div.n3::before {
 
 /*card carousel responsive*/
 .card-entra{
-  display: none !important;
+  display: none;
 }
 @media screen and (max-width:900px){
   .card-entra{
@@ -234,8 +234,12 @@ div.n3::before {
   }
 }
 /*footer responsive*/
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
   .footer-title,.footer-titles{
-    font-size: 18px;
+    font-size: 15px;
+  }
+  #footer-esci{
+    display: none !important;
   }
 }
+

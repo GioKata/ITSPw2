@@ -25,13 +25,10 @@ form {
     color:white;
     font-size: 28px ; 
 }
-.blocco{
-    width: 400px;
-}
 #bottone.blocco{
     color:white;
     background-color: #090099;
-    width: 400px;
+    width: 300px;
 }
 .titoloInput{
     color: white;
@@ -47,5 +44,12 @@ form {
     }
     .esci{
         display: none;
+    }
+}
+
+/*Form responsive*/
+@media screen and (max-width: 900px){
+    #col-esci{
+        display: none !important;
     }
 }
