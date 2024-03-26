@@ -13,4 +13,9 @@ public class Dirigente extends Dipendente{
     public  void setStipendio(double somma){
         stipendio=stipendio+somma;
     }
+    @Override
+    public String toString() {
+        return super.toString()+", divisone:"+ divisione + "]";
+    }
+    
 }

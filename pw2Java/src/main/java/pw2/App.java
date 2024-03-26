@@ -2,8 +2,16 @@ package pw2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import pw2.Adapter;
 
 public class App 
 {
@@ -54,7 +62,7 @@ public class App
     }
     public static void createDaFile(Azienda a){
         int countLine=0;
-        try (Scanner r = new Scanner(new File("pw2Java\\elenco dipendenti.txt"))) {
+        try (Scanner r = new Scanner(new File("elenco dipendenti.txt"))) {
             while(r.hasNextLine()){//ciclo per ogni riga del file
                 countLine++;
                 String[] s=r.nextLine().split(";");
@@ -87,9 +95,24 @@ public class App
             }
             a.calcolaStipendio();
             r.close();
+            FileJson(a.getDipendenti());
         }catch (FileNotFoundException e) {
             throw new RuntimeException("file elenco dipendenti.txt non trovato");
         }
     
+    }
+    public static void FileJson(ArrayList<Dipendente> d){       
+        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(LocalDate.class, new Adapter()).create();
+        String json = gson.toJson(d);
+        File file;
+        try {
+            file = new File("Dipendenti.json");
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(json.toString());
+            fileWriter.close();
+        } catch (Exception e) {
+            
+            System.out.println("file Dipendenti.json non trovato");
+        }
     }
 }

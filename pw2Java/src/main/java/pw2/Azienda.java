@@ -12,6 +12,10 @@ public class Azienda {
         this.nome=nome;
         this.dipendenti=new ArrayList<>();
     }
+    public ArrayList<Dipendente> getDipendenti() {
+        return dipendenti;
+    }
+
 
     public void addDipendente(Dipendente d) throws IllegalArgumentException{
         if(!dipendenti.contains(d))

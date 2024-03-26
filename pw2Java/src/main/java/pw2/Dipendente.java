@@ -33,7 +33,7 @@ public class Dipendente implements Comparable<Dipendente>{
     @Override
     public String toString() {
         return "Dipendente [nome=" + nome + ", cognome=" + cognome + ", dataAssunzione=" + dataAssunzione
-                + ", stipendio=" + stipendio + "]";
+                + ", stipendio=" + stipendio;
     }
     @Override
     public int compareTo(Dipendente d) {

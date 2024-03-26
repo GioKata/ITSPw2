@@ -20,13 +20,10 @@ public class Tecnico extends Dipendente{
             stipendio=1500;
         }
     }
-    // @Override
-    // public int compareTo(Dipendente d) {
-    //     if(d.getClass() == this.getClass()){
-    //         Tecnico d1 = (Tecnico) d;
-    //     }else{
-    //         return -1;
-    //     }
-    //     return this.cf.compareTo(d.cf);
-    // }
+
+    @Override
+    public String toString() {
+        return super.toString() +", specialita="+ specialita + ", codiceM=" + codiceM + "]";
+    }
+    
 }
