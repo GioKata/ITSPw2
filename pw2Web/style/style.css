@@ -1,9 +1,16 @@
 p,h3,h1,h2,h4,h5,h6{
+  color: rgb(42, 42, 42) !important;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 a{
   color:black !important;
   text-decoration: none !important;
+}
+#logo{
+  height: 50px;
+}
+#header-bottone{
+  color: white !important;
 }
 .swiper {
     height:500px;
@@ -54,7 +61,7 @@ a{
   font-size: 32px;
 }
 a.scopri{
-  color: rgba(179, 133, 83, 1);
+  color: rgba(179, 133, 83, 1) !important;
 }
 #testoC{
   font-size: 16px;
@@ -76,7 +83,7 @@ a.scopri{
   font-size:24px;
 }
 .footer-titles{
-  color:#0000FF;
+  color:#65ade8;
   font-size: 24px;
 }
 
@@ -93,7 +100,14 @@ a.scopri{
 
 
 /*animazioni*/
+.contatori{
+  display: none;
+}
+.text-contatori{
+  color: white !important;
+}
 .n1,.n2,.n3{
+  color: white;
   height: 250px;
 }
 @property --num {
@@ -170,12 +184,38 @@ div.n3::before {
 .hamburger{
   display: none;
 }
+@media screen and (max-width: 1100px){
+  #logo{
+    height: 45px;
+  }
+}
+@media screen and (max-width: 900px){
+  #logo{
+    height: 40px;
+  }
+  .esci1{
+    display: none;
+  }
+}
+@media screen and (max-width: 700px){
+  #logo{
+    height: 35px;
+  }
+}
 @media screen and (max-width: 600px){
+  #logo{
+    height: 30px;
+  }
   .hamburger{
       display: block !important;
   }
   .esci{
       display: none !important;
+  }
+}
+@media screen and (max-width: 400px){
+  #logo{
+    height: 25px;
   }
 }
 
@@ -211,13 +251,23 @@ div.n3::before {
 #callToActionNoImg{
   display: none !important;
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
   #callToAction{
     display: none !important;
   }
   #callToActionNoImg{
     display: block !important;
 
+  }
+}
+@media screen and (max-width:800px){
+  #callText2-esci{
+    display: none !important;
+  }
+}
+@media screen and (max-width:1380px){
+  #callText-esci{
+    display: none !important;
   }
 }
 
@@ -227,10 +277,16 @@ div.n3::before {
     display: none !important;
   }
 }
+@media screen and (max-width:400px){
+  .card-Job{
+    width: 280px;
+  }
+}
 
 /*contatori responsive*/
+
 @media screen and (max-width:400px){
-  .ciao{
+  .text-contatori{
     display: none !important;
   }
   .n1,.n2,.n3{
@@ -239,7 +295,7 @@ div.n3::before {
 }
 /*footer responsive*/
 @media screen and (max-width:500px){
-  .footer-title,.footer-titles{
+  .footer-titles{
     font-size: 15px;
   }
   #footer-esci{

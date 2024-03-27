@@ -39,7 +39,7 @@ function createCard(d){
     getDr(d)
         .then(dR => {
             let card = document.createElement("div");
-            card.classList.add("col","px-2","py-3","carta");
+            card.classList.add("col","px-2","py-3","carta","d-flex", "flex-column","align-items-center");
             let topDiv=document.createElement("div");
             topDiv.classList.add("d-flex","flex-column","text-center","topDiv","pt-1",d.categoria);
             let dataDiv=document.createElement("div");

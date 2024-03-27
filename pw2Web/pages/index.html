@@ -13,7 +13,7 @@
             <header class="d-flex align-items-center justify-content-center py-3">
               <div class="col">
                 <a href="index.html" class="d-flex align-items-center mb-2  text-dark text-decoration-none">
-                    <img class="img-fluid" src="../../pw2Design/logov.svg">
+                    <img id="logo" src="../../pw2Design/logov.svg">
                 </a>
             </div>
               <div class="col hamburger ms-3">
@@ -32,7 +32,7 @@
               <div class="col text-center esci">
               <a href="#">Chi siamo</a>
               </div>
-              <div class="col text-center esci">
+              <div class="col text-center esci esci1">
                 <a href="#">Il nostro Team</a>
               </div>
               <div class="col text-center esci">
@@ -45,8 +45,8 @@
                 <a href="#">Selezione</a>
               </div>
               <div>
-                <button type="button" class="btn btn-primary">
-                  <a href="Portale.html">Portale HR</a>
+                <button type="button" class="btn btn-primary" >
+                  <a href="Portale.html" id="header-bottone">Portale HR</a>
                 </button>
               </div>
             </header>
@@ -69,7 +69,7 @@
             <div class="col-3 text-center border bg-light carta mx-2 card-esci">
               <br />
               <i class="fa-solid fa-handshake i"></i>
-              <h4>Personal Recruting</h4>
+              <h4>Personal Recruiting</h4>
               <p>Grazie alla nostra competenza come psicologi, identifichiamo i profili più in linea con la visione aziendale.</p>
               <a class="scopri" href="#card1">Scopri di piu -></a>
             </div>
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <div class="row d-flex flex-column">
-                <h4 id="titoloCard">Personal Recruting</h4>
+                <h4 id="titoloCard">Personal Recruiting</h4>
                 <p id="testoCard">Grazie alla nostra competenza come psicologi, identifichiamo i profili più in linea con la visione aziendale.<br /></p>
                 <a class="scopri" href="#card3">Scopri di piu -></a>
               </div>
@@ -122,7 +122,7 @@
             <!-- titolo suddivisiorio -->
             <div class="row text-center d-flex justify-content-center">
               <div class="col" id="divisorio">
-                <h3 class="m-5">ITC Recruting classes</h3>
+                <h3 class="m-5">ITC Recruiting classes</h3>
               </div>
             </div>
             <!-- two col-6 -->
@@ -160,11 +160,13 @@
                     <h3 id="titoloC">Società di recruiment</h3>
                     <br />
                     <p id="testoC">Suggeriamo inostri clienti con progetti personalizzati di head hunting che lavorino la costruzione di team di lavoro in grado di concretizzare la strategia aziendale.
-
-                      <br />In particolare grazie al nostro network ci occupiamo di:
+                      <span id="callText-esci">
+                        <br />In particolare grazie al nostro network ci occupiamo di:
                       <br />-Analizzare il contesto e il ruolo professionale 
                       <br />-Ricercare in modo mirato i profili agganciati a settori specifici
                       <br />-Selezioniamo i candidati più ideonei per le esigenze aziendali in ambiti di hard e soft skills 
+                      </span>
+                      
                     </p>
                     <a class="scopri" href="#callToAction">Scopri di piu -></a>
                     <br />
@@ -184,13 +186,14 @@
                     <h3 id="titoloC">Società di recruiment</h3>
                     <br />
                     <p id="testoC">Suggeriamo inostri clienti con progetti personalizzati di head hunting che lavorino la costruzione di team di lavoro in grado di concretizzare la strategia aziendale.
-
-                      <br />In particolare grazie al nostro network ci occupiamo di:
+                      <span id="callText2-esci">
+                        <br />In particolare grazie al nostro network ci occupiamo di:
                       <br />-Analizzare il contesto e il ruolo professionale 
                       <br />-Ricercare in modo mirato i profili agganciati a settori specifici
                       <br />-Selezioniamo i candidati più ideonei per le esigenze aziendali in ambiti di hard e soft skills 
+                      </span>
                     </p>
-                    <a href="#callToAction">Scopri di piu -></a>
+                    <a class="scopri" href="#callToAction">Scopri di piu -></a>
                     <br />
                     <br />
                   </div>
@@ -199,15 +202,15 @@
             </div>
           </div>
           <!-- contatori -->
-          <div class="row contatori bg-dark">
+          <div class="row d-flex contatori bg-dark" id="contatori">
             <div class="col m-0  offerte n1 text-white text-center d-flex flex-column justify-content-center">
-              <h4 class="ciao">clienti soddisfatti</h4>
+              <h4 class="text-contatori">clienti soddisfatti</h4>
             </div>
             <div class="col m-0 offerte n2 text-white text-center d-flex flex-column justify-content-center">
-              <h4 class="ciao">assunzioni effettuate</h4>
+              <h4 class="text-contatori">assunzioni effettuate</h4>
             </div>
             <div class="col m-0 offerte n3 text-white text-center d-flex flex-column justify-content-center"> 
-              <h4 class="ciao">chiusura selezione</h4>
+              <h4 class="text-contatori">chiusura selezione</h4>
             </div>
           </div>
           <!-- Ultime offerte di lavoro -->
@@ -284,9 +287,9 @@
             </div>
             <div class="col text-center">
               <h2 class="footer-titles">Seguici su</h2>
-              <p class="footer-text">Instagram</p>
-              <p class="footer-text">Facebook</p>
-              <p class="footer-text">Linkedin</p>
+              <p class="footer-text"><i class="fa-brands fa-instagram"></i> Instagram</p>
+              <p class="footer-text"><i class="fa-brands fa-facebook"></i> Facebook</p>
+              <p class="footer-text"><i class="fa-brands fa-linkedin"></i> Linkedin</p>
             </div>
           </div>
           <div class="row justify-content-center border-top">

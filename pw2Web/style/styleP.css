@@ -5,6 +5,19 @@ a{
     color:black !important;
     text-decoration: none !important;
 }
+header{ 
+    border-bottom: black 1px solid;
+}
+#logo{
+  height: 50px;
+}
+#header-bottone{
+  border-radius: 5px;
+  background-color: #5c0c93;
+}
+#header-bottone-text{
+    color: white !important;
+}
 .topDiv{
     width: 314px !important;
     color:white;
@@ -25,24 +38,80 @@ h5{
     box-shadow:  1px 1px 1px #D2D2D2;
 }
 .dirigente{
-    background-color: black;
+    background-color: #53277e;
 }
 .manager{
-    background-color: #C32F00;
+    background-color: #2e2d88;
 }
 .tecnico{
-    background-color: #6161FF;
+    background-color: #65ade8;
 }
 /*Header Rersponsive*/
 .hamburger{
+  display: none;
+}
+@media screen and (max-width: 1100px){
+  #logo{
+    height: 45px;
+  }
+}
+@media screen and (max-width:1000px){
+  .esci1{
     display: none;
+  }
+}
+@media screen and (max-width: 900px){
+  #logo{
+    height: 40px;
+  }
+}
+@media screen and (max-width: 700px){
+  #logo{
+    height: 35px;
+  }
 }
 @media screen and (max-width: 600px){
-    .hamburger{
-        display: block !important;
-    }
-    .esci{
-        width: 0px !important;
-        display: none;
-    }
+  #logo{
+    height: 30px;
+  }
+  .esci1{
+    display: block !important;
+  }
+  .hamburger{
+      display: block !important;
+  }
+  .esci{
+      display: none !important;
+  }
 }
+@media screen and (max-width: 400px){
+  #logo{
+    height: 25px;
+  }
+}
+
+.footer-titles{
+  color:#65ade8;
+  font-size: 24px;
+}
+  
+  .footer-title{
+    font-size: 30px;
+  }
+  .footer-termini{
+    font-size: 14px;
+  }
+  .footer-text{
+    font-size: 18px;
+  }
+  
+  /*footer responsive*/
+  @media screen and (max-width:500px){
+    .footer-titles{
+      font-size: 15px;
+    }
+    #footer-esci{
+      display: none !important;
+    }
+  }
+  
